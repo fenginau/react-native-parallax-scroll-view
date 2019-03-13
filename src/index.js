@@ -239,7 +239,7 @@ class ParallaxScrollView extends Component {
 					styles.backgroundImage,
 					{
 						backgroundColor: backgroundColor,
-						height: parallaxHeaderHeight,
+						minHeight: parallaxHeaderHeight,
 						width: viewWidth,
 						opacity: fadeOutBackground
 							? interpolate(scrollY, {
@@ -289,7 +289,7 @@ class ParallaxScrollView extends Component {
 					style={[
 						styles.parallaxHeader,
 						{
-							height: parallaxHeaderHeight,
+							minHeight: parallaxHeaderHeight,
 							opacity: fadeOutForeground
 								? interpolate(scrollY, {
 									inputRange: [0, p * (1 / 2), p * (3 / 4), p],
@@ -300,7 +300,7 @@ class ParallaxScrollView extends Component {
 						}
 					]}
 				>
-					<View style={{ height: parallaxHeaderHeight }}>
+					<View style={{ minHeight: parallaxHeaderHeight }}>
 						{renderForeground()}
 					</View>
 				</Animated.View>
