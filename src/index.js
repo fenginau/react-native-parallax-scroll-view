@@ -379,7 +379,7 @@ class ParallaxScrollView extends Component {
 						styles.stickyHeader,
 						{
 							width: viewWidth,
-							...(stickyHeaderHeight ? { height: stickyHeaderHeight } : null)
+							...(stickyHeaderHeight ? { minHeight: stickyHeaderHeight } : null)
 						}
 					]}
 				>
@@ -387,7 +387,7 @@ class ParallaxScrollView extends Component {
 						? <Animated.View
 							style={{
 								backgroundColor: backgroundColor,
-								height: stickyHeaderHeight,
+								minHeight: stickyHeaderHeight,
 								opacity: interpolate(scrollY, {
 									inputRange: [0, p],
 									outputRange: [0, 1],
